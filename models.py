@@ -6,19 +6,6 @@ from formulas import sig, inv_sig, inv_err
 
 curr_node_id = 0
 
-class Node:
-    def __init__(self, value):
-        self.id = curr_node_id
-        self.value = value
-        self.bias = (random.random() * 2) - 1
-        curr_node_id += 1
-
-class Edge:
-    def __init__(self, weight, from_node, to_node):
-        self.weight = weight
-        self.from_node = from_node
-        self.to_node = to_node
-
 class Layer:
     def __init__(self, num_nodes, input_vals, layer_num):
         self.num_nodes = num_nodes
